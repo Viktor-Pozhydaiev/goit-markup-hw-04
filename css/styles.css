@@ -54,7 +54,7 @@ img {
 }
 
 .link {
-  current: var(--accent-color);
+  content: var(--accent-color);
   text-decoration: none;
 }
 .list {
@@ -137,20 +137,24 @@ img {
 .tell-img {
   margin-right: 10px;
 }
+.tell:hover,
+.tell:focus {
+  color: var(--accent-color);
+}
 .tell-img:hover,
 .tell-img:focus {
   color: var(--accent-color);
 }
 
 .tell {
+  display: flex;
+  align-items: center;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-decoration-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .info:focus,
 .info:hover {
@@ -242,9 +246,10 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  padding: 25px 100px;
   background-color: rgba(245, 244, 250, 1);
   border-radius: 4px;
+  width: 270px;
+  height: 120px;
 }
 .features-list-item {
   font-weight: 700;
@@ -338,7 +343,7 @@ img {
   fill: var(--icon-color);
 }
 .our-team-wrapper {
-  padding: 30px 55px;
+  padding: 30px 45px;
   background: var(--secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -370,8 +375,11 @@ img {
 }
 /* --- end Team--- */
 /* ----clients---- */
-.clients-title {
+.clients {
   padding-top: var(--section-pt);
+  padding-bottom: var(--section-pt);
+}
+.clients-title {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 36px;
@@ -391,37 +399,26 @@ img {
   fill: var(--accent-color);
 }
 .clients-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   fill: var(--icon-color);
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  width: 170px;
+  height: 90px;
 }
+.clients-item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .clients-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-top: 50px;
-  padding-bottom: var(--section-pt);
 }
-.one {
-  margin: 20px 63px;
-}
-.two {
-  margin: 19px 65px;
-}
-.three {
-  margin: 24px 64px;
-}
-.four {
-  margin: 24px 45px;
-}
-.five {
-  margin: 22px 55px;
-}
-.six {
-  margin: 22px 41px;
-}
+
 /* ----end clients---- */
 /* --footer-- */
 
@@ -446,11 +443,12 @@ img {
   display: flex;
   align-items: baseline;
 }
-
+.footer-logo-box {
+  margin-right: 70px;
+}
 .address {
   font-style: normal;
   margin-top: 20px;
-  margin-right: 70px;
 }
 
 .section-footer-social-list {
